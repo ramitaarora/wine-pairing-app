@@ -1,0 +1,237 @@
+[
+    {
+        "food type": "White Meats",
+        "name": "Chicken",
+        "description": "Mild and versatile in flavor, often having a slightly savory or umami taste and is cooked until tender."
+    },
+    {
+        "food type": "White Meats",
+        "name": "Turkey",
+        "description": "A bird with a slightly gamey and earthly flavor compared to chickens milder taste. It is also usually a bit drier due to its lower fat content."
+    },
+    {
+        "food type": "White Meats",
+        "name": "Duck",
+        "description": ""
+    },
+    {
+        "food type": "White Meats",
+        "name": "Goose",
+        "description": "A stronger flavor, closer to red meat rather than chicken which renders a tender, moist and fatty protein"
+    },
+    {
+        "food type": "White Meats",
+        "name": "Game Birds",
+        "description": "Rich and tangy in flavor, often described as earthy or musky. The darker the meat, the sweeter the taste."
+    },
+    {
+        "food type": "White Meats",
+        "name": "Lamb",
+        "description": "Often described as 'gamey' or pastoral. Its flavor comes from the branch-chained fatty acids found in the fat of the lamb."
+    },
+    {
+        "food type": "White Meats",
+        "name": "Rabbit",
+        "description": "A bit like chicken with stronger earth tones and somewhat 'gamey'."
+    },
+    {
+        "food type": "White Meats",
+        "name": "Veal",
+        "description": "Delicate and mild in flavor, it is lean but has more fat than something like chicken"
+    },
+    {
+        "food type": "Red Meats",
+        "name": "Pork",
+        "description": "Meaty, slightly sweet and savory in flavor. Its versatility comes from the herbs and spices it is often cooked with."
+    },
+    {
+        "food type": "Red Meats",
+        "name": "Beef",
+        "description": "A rich savory flavor with slightly sweet undertone that can depend on the cut used and the amount of time cooked."
+    },
+    {
+        "food type": "Red Meats",
+        "name": "Venison",
+        "description": "Rich and earthy with gamey undertones and hints of acorn, sage, and other herbs. Its leaner than beef and other red meats."
+    },
+    {
+        "food type": "Red Meats",
+        "name": "Mutton",
+        "description": "Strong and rich in flavor, it mellows in taste as the meat cooks. It can have a musty hint of grass or hay, but shines when used with bold herbs and spices."
+    },
+    {
+        "food type": "Red Meats",
+        "name": "Boar",
+        "description": "A leaner meat with a 'gamey' taste, darker than regular pork, it has an intense, sweet, and nutty flavor."
+    },
+    {
+        "food type": "Red Meats",
+        "name": "Hare",
+        "description": "A rich 'gamey' flavor which is high in protein and low in fat content."
+    },
+    {
+        "food type": "Pasta",
+        "name": "Carbonara",
+        "description": "An Italian pasta dish typically made with pancetta, eggs, and parmesan cheeses."
+    },
+    {
+        "food type": "Pasta",
+        "name": "Cheese-based",
+        "description": "Usually a savory and creamy dish rich in fat"
+    },
+    {
+        "food type": "Pasta",
+        "name": "Tomato-based",
+        "description": "Typically a lighter dish with a smoother finish and usually includes garlic, peppers, or basil"
+    },
+    {
+        "food type": "Pasta",
+        "name": "Pesto-based",
+        "description": "Bright and pungent, with a strong flavor of basil or other garden herbs mized with nuts and cheese"
+    },
+    {
+        "food type": "Pasta",
+        "name": "Seafood pasta",
+        "description": "Tasting usually of a butter, garlic, and white wine reduction, it invokes the memory of the sea from which it derives its protein from."
+    },
+    {
+        "food type": "Pasta",
+        "name": "Vegetable pasta",
+        "description": "Light and fresh, it offers some balance to what is usually considered a heavier pairing with pasta itself."
+    },
+    {
+        "food type": "Pasta",
+        "name": "Spicy pasta",
+        "description": "The heat from the spice level often is cooled with the calming pasta base. The spice level can become intense as more is added and the pasta offers little in the way of competing flavor"
+    },
+    {
+        "food type": "Vegetables",
+        "name": "Salads",
+        "description": "A lighter option of a meal, it is often accentuated by the dressing and toppings added to give it a variety of versatility."
+    },
+    {
+        "food type": "Vegetables",
+        "name": "Green Vegetables",
+        "description": ""
+    },
+    {
+        "food type": "Vegetables",
+        "name": "Root Vegetables",
+        "description": "A richer, heartier meal, the earthy tones and substantive root vegetable will leave you feeling satiated"
+    },
+    {
+        "food type": "Vegetables",
+        "name": "Mushrooms",
+        "description": "Each mushroom offers a unique flavor profile, often described as umami, the fifth taste on the tongue behind sweet, salty, sour, and bitter. It is usually robust and rich in flavor and is often compared to meat."
+    },
+    {
+        "food type": "Vegetables",
+        "name": "Tomato-based Dishes",
+        "description": "A light compliment, the tomato offers its pasta counterpart flexibility in its flavor profile without overwhelming any accents added in the form of herbs or spices."
+    },
+    {
+        "food type": "Vegetables",
+        "name": "Spicy Vegetables",
+        "description": "Heat is often the forward flavor profile with spicy vegetables so a calming or cooling counter party is needed to fully appreciate the experience."
+    },
+    {
+        "food type": "Seafood Fish",
+        "name": "White Fish",
+        "description": "Usually considered mild in flavor, it can sometimes have a delicate, sweet, buttery taste and flakey texture."
+    },
+    {
+        "food type": "Seafood Fish",
+        "name": "Meaty and Oily Fish",
+        "description": "They can range from meaty to creamy, pungent to fatty. This protein is as varied as the fish in the sea."
+    },
+    {
+        "food type": "Seafood Shellfish",
+        "name": "Clam",
+        "description": "A subtle briny taste, often described as mildy sweet compared to its fishier counter-parts."
+    },
+    {
+        "food type": "Seafood Shellfish",
+        "name": "Crab",
+        "description": "Sweet and succulent with a slightly sweet and briny flavor reminiscent of the ocean. Its texture is delicate and moist in texture."
+    },
+    {
+        "food type": "Seafood Shellfish",
+        "name": "Lobster",
+        "description": "A sweet, saline, briny taste, with a more savory flavor from the more matured of the species. The tail meat has firm textured and concentrates the flavor profile. Liquified butter is often a staple component of the dish."
+    },
+    {
+        "food type": "Seafood Shellfish",
+        "name": "Abalone",
+        "description": "Its briny and sweet flavor is described as butter. The texture of the abalone is hard and dense."
+    },
+    {
+        "food type": "Seafood Shellfish",
+        "name": "Scallop",
+        "description": "Briny and slightly sweet in flavor, but not overly fishy in taste. Its texture is firm and light and often described as succulent when cooked properly."
+    },
+    {
+        "food type": "Soft Cheese",
+        "name": "Goat Cheese",
+        "description": "The flavor profile is tart, with a soft spreadable texture. It has tangy and earthy tones which compliment many dishes."
+    },
+    {
+        "food type": "Soft Cheese",
+        "name": "Feta",
+        "description": "It has a tangy, slightly salty and mildly sour taste that recalls pepper and ginger, with just a hint of sweetness."
+    },
+    {
+        "food type": "Semi-Hard Cheese",
+        "name": "Manchego",
+        "description": "Savory, tangy, and slightly sweet in taste which leaves a creamy nutty taste on the palette."
+    },
+    {
+        "food type": "Hard Cheese",
+        "name": "Parmesan",
+        "description": "Rich, tangy, nutty, sharp, fruity, and bold are all common descriptions of this hard cheese."
+    },
+    {
+        "food type": "Hard Cheese",
+        "name": "Cheddar",
+        "description": "Mild cheddar is smooth with a subtle buttery taste. Medium cheddar has a stronger profile. White cheddar has a tangy and robust taste."
+    },
+    {
+        "food type": "Semi-Hard Cheese",
+        "name": "Gruyere",
+        "description": "A rich, slightly nutty taste that derives from the cows milk found in Gruyere, Switzerland."
+    },
+    {
+        "food type": "Semi-Soft Cheese",
+        "name": "Blue Cheese",
+        "description": "This cheese tastes salty, bright, and earthy. It is sometimes described as a bit funky and can contain black pepper notes depending on the cheese producer."
+    },
+    {
+        "food type": "Soft Cheese",
+        "name": "Brie",
+        "description": "A soothing and mellow flavor, Brie has a hint of nuttiness but its flavor profile is suble enough that it can be overwhelmed if paired with stronger flavor profiles."
+    },
+    {
+        "food type": "Soft Cheese",
+        "name": "Camembert",
+        "description": "Described as mushroomy, eggy, garlicky, nutty, or fruity, Camembet can have a variety of flavor profiles. Its soft and creamy texture also lends its rind to be edible as well."
+    },
+    {
+        "food type": "Dessert",
+        "name": "Fruit-based Desserts",
+        "description": "Often having an appetizing aroma and clean flavor profiles, many fruit desserts are served chilled but some achieve their peak flavor profile at room temperature."
+    },
+    {
+        "food type": "Dessert",
+        "name": "Chocolate and Caramel",
+        "description": "Ranging from bitter darker chocolate to a sweet or semi-sweet milk chocolate, this flavor profile offers something sweet which is a unqiue profile all its own. Caramel is often sweet or extremely sweet and a little amount can go a long way flavor-wise."
+    },
+    {
+        "food type": "Dessert",
+        "name": "Baked Goods",
+        "description": "There are a variety of baked goods that have many varying and unique flavor profiles which range from tarts to pies to sweet-filled cookies."
+    },
+    {
+        "food type": "Dessert",
+        "name": "Cakes",
+        "description": "Sweet and Semi sweet cakes often serve as a final note to a wonderful meal, their sweetness ending things on a brighter note than the main course often offered."
+    }
+]
