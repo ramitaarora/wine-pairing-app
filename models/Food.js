@@ -5,24 +5,28 @@ class Food extends Model {}
 
 Food.init(
     {
-        id:{
-            type: DataTypes.STRING,
+        food_id:{
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
+        },
+        food_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         food_type:{
             type: DataTypes.STRING,
             allowNull: false,
         },
-        name: {
-            type: DataTypes.STRING,
+        food_price: {
+            type: DataTypes.DECIMAL(10, 2),
             allowNull: false,
         },
-        description: {
+        food_description: {
             type: DataTypes.STRING,
         },
-        user_id: {
+        wine_pairings: {
             type: DataTypes.INTEGER,
             references: {
                 model: '',
