@@ -1,24 +1,20 @@
 [
     {
-        "user_id": 1,
         "name": "Ramita",
         "email:": "ramita@example.com",
         "password": "password12345"
     },
     {
-        "user_id": 2,
         "name": "John",
         "email:": "john@example.com",
         "password": "password12345"
     },
     {
-        "user_id": 3,
         "name": "Eric",
         "email:": "eric@example.com",
         "password": "password12345"
     },
     {
-        "user_id": 4,
         "name": "Christa",
         "email:": "christa@example.com",
         "password": "password12345"
