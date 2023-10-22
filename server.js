@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 // const helpers = require('./utils/helpers');
 const _ai = require("lowline.ai");
-const hbs = exphbs.create({});
+const hbs = exphbs.create({/*COMMENTED THIS OUT*/});
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
