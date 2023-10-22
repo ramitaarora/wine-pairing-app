@@ -1,22 +1,22 @@
 [
     {
         "name": "Ramita",
-        "email:": "ramita@example.com",
+        "email": "ramita@example.com",
         "password": "password12345"
     },
     {
         "name": "John",
-        "email:": "john@example.com",
+        "email": "john@example.com",
         "password": "password12345"
     },
     {
         "name": "Eric",
-        "email:": "eric@example.com",
+        "email": "eric@example.com",
         "password": "password12345"
     },
     {
         "name": "Christa",
-        "email:": "christa@example.com",
+        "email": "christa@example.com",
         "password": "password12345"
     }
 ]
