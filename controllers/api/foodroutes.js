@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        const foodData = await Food.findByPk(req.params.id);
+        const foodData = await Food.findByPk(req.params.food_id);
 
         if(!foodData) {
             res.status(404).json({ message: 'No meal found with that id.'});
@@ -37,7 +37,7 @@ router.put('/:id', async (req, res) => {
     try{
         const foodData = await Food.update(req.body, {
             where: {
-                id: req.params.id
+                id: req.params.food_id
             },
         });
         if (!foodData[0]){
@@ -54,7 +54,7 @@ router.delete('/:id', async (req, res) => {
     try{
         const foodData = await Food.destroy({
             where: {
-                id: req.params.id
+                id: req.params.food_id
             },
         });
         if(!foodData){
