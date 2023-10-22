@@ -1,43 +1,49 @@
-<header>
-    <h1>🍷 Wine Wizard 🍷</h1>
-</header>
+<section id="landing">
+  <header>
+      <h1>🍷 Wine Wizard 🍷</h1>
+  </header>
 
-<div id="login">
-    <h2>Login</h2>
+  <section id="forms">
+    <div id="login">
+        <h2>Login</h2>
+        <form class="form login-form">
+          <div class="form-group">
+            <label for="email-login">Email:</label>
+            <input class="form-input" type="text" id="email-login" />
+          </div>
+          <div class="form-group">
+            <label for="password-login">Password:</label>
+            <input class="form-input" type="password" id="password-login" />
+          </div>
+          <div class="form-group">
+            <button class="button" type="submit">Login</button>
+          </div>
+        </form>
+    </div>
 
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="button" type="submit">login</button>
-      </div>
-    </form>
-</div>
+    <div id="signup">
+      <h2>Sign Up</h2>
+      <form class="form signup-form">
+        <div class="form-group">
+          <label for="name-signup">Name:</label>
+          <input class="form-input" type="text" id="name-signup" />
+        </div>
+        <div class="form-group">
+          <label for="email-signup">Email:</label>
+          <input class="form-input" type="text" id="email-signup" />
+        </div>
+        <div class="form-group">
+          <label for="password-signup">Password:</label>
+          <input class="form-input" type="password" id="password-signup" />
+        </div>
+        <div class="form-group">
+          <button class="button" type="submit">Sign Up</button>
+        </div>
+      </form>
+    </div>
 
-<div id="signup">
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="button" type="submit">signup</button>
-      </div>
-    </form>
-</div>
+  </section>
+  <script src="./js/login.js"></script>
+  
+</section>
 
-<script src="./js/login.js"></script>
