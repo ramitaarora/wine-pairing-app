@@ -21,3 +21,6 @@ const User = require('./User');
 // });
 
 module.exports = {User};
+const Food = require('./Food');
+
+module.exports = { Food };
