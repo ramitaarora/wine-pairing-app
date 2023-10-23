@@ -2,37 +2,42 @@ const router = require('express').Router();
 const { Food, Wine, Pairing, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', (req, res) => {
+    res.render('landingPage');
+});
+
+router.get('/home', async (req, res) => {
 try{
-    const pairingData = await Pairing.findAll({
+    const pairingData = await Food.findAll({
         include: [
-            {
-            model: User,
-            attributes: ['name'],
-            },
+            // {
+            // model: User,
+            // attributes: ['name'],
+            // },
+            // {
+            // model: Wine,
+            // attributes: 
+            //             ['name']
+            //             ['type']
+            //             ['price']
+            //             ['description']
+            // },
             {
             model: Wine,
-            attributes: 
-                        ['name']
-                        ['type']
-                        ['price']
-                        ['description']
-            },
-            {
-            model: Food,
-            attributes: 
-                        ['name']
-                        ['type']
-                        ['price']
-                        ['description']
+            through: Pairing,
+            // attributes: 
+            //             ['name']
+            //             ['type']
+            //             ['price']
+            //             ['description']
             },
         ],
-    });
+    }
+    );
 
     const pairings = pairingData.map((pairing) => pairing.get({ plain: true }));
-    
+    // console.log(pairings);
     res.json(pairings);
-
     // res.render('homepage', { pairings, logged_in: req.session.logged_in });
 
     } catch (err) {

@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
-
-
-</head>
-<body>
-    
-</body>
-</html>
-
 {{!-- 
 {{#if pairings.length}}
 
@@ -20,3 +6,105 @@
 {{/each}}
 
 {{/if}} --}}
+
+<div class="container text-center">
+        <div class="row">
+          <div class="col-8">
+            <h1>Welcome {{ pairings.name }}!</h1>
+
+          
+            <div class="col">
+                <div class="col-12 col-sm-6 col-lg-10 mb-3">
+                  <div class="card">
+                    <h3 class="card-header">
+                      Welcome to your personal pairings menu!
+                    </h3>
+                    <div class="card-body" id="meal-choice">
+                        <p class="card-text" id="wine-dropdown">
+                          Please choose a type of wine you have recently purchased:</p>
+                        <p><select class="form-select" id="wine-dropdown-choice" aria-label="Default select example">
+                          <option selected value="">I would like to drink:</option>
+                          <option value="wt">A White Wine</option>
+                          <option value="rd">A Red Wine</option>
+                        </select>
+                        <p><select class="form-select" id="second-dropdown-wine-choice" aria-label="Default select example">
+                        </select>
+                        </p>
+                    
+
+                      <p id="food-dropdown">Please select which type of meal you will be enjoying with your bottle of wine:</p>
+                      <p><select class="form-select" id="food-dropdown-choice" aria-label="Default select example">
+                        <option selected value="">My main dish consists of:</option>
+                        <option value="wm">White Meat</option>
+                        <option value="rm">Red Meat</option>
+                        <option value="pa">Pasta</option>
+                        <option value="vg">Vegetables</option>
+                        <option value="sf">Seafood</option>
+                        <option value="ch">Cheese</option>
+                        <option value="de">Dessert</option>
+                      </select>    
+                      <p><select class="form-select" id="second-dropdown-meal-choice" aria-label="Default select example">
+                    </select>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./assets/images/WineSlide1.jpg" class="d-block w-100" alt="wine-1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/images/WineSlide2.jpg" class="d-block w-100" alt="wine-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/images/WineSlide3.jpg" class="d-block w-100" alt="wine-3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/images/WineSlide4.jpg" class="d-block w-100" alt="wine-4">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+
+          </div>
+
+          
+          <div class="col-4">
+            <div class="row">
+                <div class="col-4">
+                  <div id="list-example" class="list-group">
+                    <a class="list-group-item list-group-item-action" href="#user-pairing-1">Pairing 1</a>
+                    <a class="list-group-item list-group-item-action" href="#user-pairing-2">Pairing 2</a>
+                    <a class="list-group-item list-group-item-action" href="#user-pairing-3">Pairing 3</a>
+                    <a class="list-group-item list-group-item-action" href="#user-pairing-4">Pairing 4</a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                    <h4 id="user-pairing-1">Pairing 1</h4>
+                    <p>A pairing you have chosen in the past: A White Wine Chardonnay paired with Turkey</p>
+                    <h4 id="user-pairing-2">Pairing 2</h4>
+                    <p>A pairing you have chosen in the past: A Red Wine Merlot paired with Venison</p>
+                    <h4 id="user-pairing-3">Pairing 3</h4>
+                    <p>A pairing you have chosen in the past: A White Wine Pinot Noir paired with Pork</p>
+                    <h4 id="user-pairing-4">Pairing 4</h4>
+                    <p>A pairing you have chosen in the past: A Red Wine Zinfendel paired with a Tomato-based Pasta</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+        
+        </div>

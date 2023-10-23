@@ -4,7 +4,7 @@ const sequelize = require("../config/connection");
 class Wine extends Model {}
 
 Wine.init({
-  id: {
+  wine_id: {
     type: DataTypes.INTEGER,
     allownull: false,
     primaryKey: true,
@@ -35,13 +35,6 @@ Wine.init({
     type: DataTypes.INTEGER,
     allownull: false,
   },
-  // food_pairings_id: {
-  //     type: DataTypes.INTEGER,
-  //     references: {
-  //         model: 'pairing',
-  //         key: 'id',
-  //     },
-  // }
 },
 {
     sequelize,
