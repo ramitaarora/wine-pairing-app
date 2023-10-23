@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food and Wine Pairing Search</title>
+  <style>
+    .search-bar {
+      display: flex;
+      margin: 20px;
+    }
+
+    input[type="search"] {
+      padding: 10px;
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .pairing-result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-bar">
+    <input type="search" id="search-input" placeholder="Search..." />
+    <button onclick="search()">Search</button>
+  </div>
+
+  <div id="pairing-result"></div>
+
+  <script>
+    const _ai = require('lowline.ai');
+
+    const searchPairings = async (searchTerm) => {
+      const foodList = ['steak', 'salmon', 'pasta', 'salad', 'cheese'];
+      const wineList = ['cabernet sauvignon', 'pinot noir', 'chardonnay', 'sauvignon blanc', 'riesling'];
+
+      const recommendedFood = await _ai.recommendFromList({
+        count: 1,
+        search_term: searchTerm,
+        search_items: foodList,
+      });
+
+      const recommendedWine = await _ai.recommendFromList({
+        count: 1,
+        search_term: searchTerm,
+        search_items: wineList,
+      });
+
+      const pairing = {
+        food: recommendedFood.result[0],
+        wine: recommendedWine.result[0],
+      };
+
+      return pairing;
+    };
+
+    function search() {
+      const searchTerm = document.getElementById('search-input').value;
+      const pairingResult = document.getElementById('pairing-result');
+
+      searchPairings(searchTerm).then((pairing) => {
+        pairingResult.innerHTML = `Recommended pairing for "${searchTerm}":<br>`;
+        pairingResult.innerHTML += `Food: ${pairing.food}<br>`;
+        pairingResult.innerHTML += `Wine: ${pairing.wine}`;
+      });
+    }
+  </script>
+</body>
+</html>

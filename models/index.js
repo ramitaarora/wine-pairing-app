@@ -1,7 +1,7 @@
 const User = require('./User');
 // const Pairing = require('./Pairing');
-// const Food = require('./Food');
-// const Wine = require('./Wine');
+const Food = require('./Food');
+const Wine = require('./Wine');
 
 // Wine.hasMany(Food, {
 //   foreign_key: ''
@@ -20,7 +20,4 @@ const User = require('./User');
 //     foreignKey: 'user_id'
 // });
 
-module.exports = {User};
-const Food = require('./Food');
-
-module.exports = { Food };
+module.exports = { Food, Wine, User };

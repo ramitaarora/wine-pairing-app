@@ -1,9 +1,11 @@
 const sequelize = require('../config/connection');
-const { Food } = require('../models');
-
-// const userData = require('./userData.json');
 const foodData = require('./foodData.json');
-// const wineData = require('./wineData.json');
+const wineData = require('./wineData.json');
+// const userData = require('./userData.json');
+
+
+const { Food, Wine } = require('../models');
+
 
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
@@ -15,7 +17,7 @@ const seedDatabase = async () => {
 
     await Food.bulkCreate(foodData);
 
-    // await Wine.bulkCreate(wineData);
+    await Wine.bulkCreate(wineData);
     
     process.exit(0);
 };
