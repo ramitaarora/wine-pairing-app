@@ -1,13 +1,16 @@
-
 const express = require('express');
 const router = express.Router();
 const lowlineAI = require('lowline.ai');
 const Pairing = require('../models/pairing');
+const readline = require('readline');
 
-// lowlineAI.init({ apiKey: 'YOUR_API_KEY' });
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
 router.get('/search', async (req, res) => {
-  const searchTerm = req.query.term;
+  const searchTerm = await getUserInput('Enter a search term: ');
   const pairings = await Pairing.findAll({
     where: {
       food: {
@@ -20,11 +23,19 @@ router.get('/search', async (req, res) => {
 });
 
 router.post('/search', async (req, res) => {
-  const searchTerm = req.body.term;
+  const searchTerm = await getUserInput('Enter a search term: ');
   const recommendedPairing = await searchPairings(searchTerm);
 
   res.json({ recommendedPairing });
 });
+
+const getUserInput = (question) => {
+  return new Promise((resolve) => {
+    rl.question(question, (answer) => {
+      resolve(answer);
+    });
+  });
+};
 
 const searchPairings = async (searchTerm) => {
   const foodList = ['steak', 'salmon', 'pasta', 'salad', 'cheese'];
