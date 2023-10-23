@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const { Op } = require('sequelize');
 const lowlineAI = require('lowline.ai');
-const Pairing = require('../../models');
+const Pairing = require('../../models/Pairing');
 const readline = require('readline');
 
 const rl = readline.createInterface({

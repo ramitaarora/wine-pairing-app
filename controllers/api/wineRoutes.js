@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Wine } = require('../../models');
 
-// GET all Wines  /api/wine
+
 router.get('/', async (req, res) => {
   try {
     const wineData = await Wine.findAll();
@@ -10,8 +10,6 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// GET a single Wine  /api/wine/:id
 router.get('/:id', async (req, res) => {
   try {
     const wineData = await Wine.findByPk(req.params.id)
@@ -27,7 +25,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// CREATE a Wine
+
 router.post('/', async (req, res) => {
   try {
     const wineData = await Wine.create(req.body);
@@ -37,7 +35,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// DELETE a Wine
+
 router.delete('/:id', async (req, res) => {
   try {
     const wineData = await Wine.destroy({

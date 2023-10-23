@@ -37,7 +37,8 @@ try{
 
     const pairings = pairingData.map((pairing) => pairing.get({ plain: true }));
     // console.log(pairings);
-    res.json(pairings);
+    res.render('homepage', { pairings, logged_in: req.session.logged_in });
+    //res.json(pairings);//
     // res.render('homepage', { pairings, logged_in: req.session.logged_in });
 
     } catch (err) {
