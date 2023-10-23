@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:food_id', async (req, res) => {
     try {
         const foodData = await Food.findByPk(req.params.food_id);
 
@@ -19,6 +19,8 @@ router.get('/:id', async (req, res) => {
             res.status(404).json({ message: 'No meal found with that id.'});
             return;
         }
+        const food = foodData.get({ plain: true })
+        res.status(200).json(food)
     } catch (err) {
         res.status(500).json(err)
     }
@@ -33,11 +35,11 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:food_id', async (req, res) => {
     try{
         const foodData = await Food.update(req.body, {
             where: {
-                id: req.params.food_id
+                food_id: req.params.food_id
             },
         });
         if (!foodData[0]){
@@ -50,11 +52,11 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:food_id', async (req, res) => {
     try{
         const foodData = await Food.destroy({
             where: {
-                id: req.params.food_id
+                food_id: req.params.food_id
             },
         });
         if(!foodData){
