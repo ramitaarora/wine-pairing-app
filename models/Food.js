@@ -26,13 +26,6 @@ Food.init(
         food_description: {
             type: DataTypes.STRING,
         },
-        // wine_pairings: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: '',
-        //         key: '',
-        //     },
-        // },
     },
     {
         sequelize,

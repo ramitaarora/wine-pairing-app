@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 const express = require('express');
 const router = express.Router();
 const lowlineAI = require('lowline.ai');
-const Pairing = require('../models/pairing');
+const Pairing = require('../../models');
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -10,7 +9,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-router.get('/search', async (req, res) => {
+router.get('/ai-search', async (req, res) => {
   const searchTerm = await getUserInput('Enter a search term: ');
   const pairings = await Pairing.findAll({
     where: {
@@ -19,14 +18,12 @@ router.get('/search', async (req, res) => {
       },
     },
   });
-
   res.json({ pairings });
 });
 
-router.post('/search', async (req, res) => {
+router.post('/ai-search', async (req, res) => {
   const searchTerm = await getUserInput('Enter a search term: ');
   const recommendedPairing = await searchPairings(searchTerm);
-
   res.json({ recommendedPairing });
 });
 
@@ -41,7 +38,6 @@ const getUserInput = (question) => {
 const searchPairings = async (searchTerm) => {
   const foodList = ['steak', 'salmon', 'pasta', 'salad', 'cheese'];
   const wineList = ['cabernet sauvignon', 'pinot noir', 'chardonnay', 'sauvignon blanc', 'riesling'];
-
   const recommendedFood = await lowlineAI.recommendFromList({
     count: 1,
     search_term: searchTerm,
@@ -63,14 +59,3 @@ const searchPairings = async (searchTerm) => {
 };
 
 module.exports = router;
-=======
-const router = require('express').Router();
-const { Food, Wine, Pairing, User } = require('../../models');
-// const withAuth = require('../utils/auth');
-
-router.get('/search', (req, res) => {
-    res.render('searchResults');
-});
-
-module.exports = router;
->>>>>>> 6e7fce2f18762138d76851c5827ffd7565aa4fe2
