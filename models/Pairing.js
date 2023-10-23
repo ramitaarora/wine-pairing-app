@@ -14,23 +14,23 @@ Pairing.init({
     type: DataTypes.INTEGER,
     references: {
       model: 'food',
-      key: 'food_id',
+      key: 'id',
     },
   },
   wine_id: {
     type: DataTypes.INTEGER,
     references: {
       model: 'wine',
-      key: 'wine_id',
+      key: 'id',
     },
-  }
-  // user_id: {
-  //   type: DataTypes.INTEGER,
-  //   references: {
-  //     model: 'user',
-  //     key: 'user_id',
-  //   },
-  // },
+  },
+  user_id: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: 'user',
+      key: 'id',
+    },
+  },
 }, {
   sequelize,
   timestamps: false,

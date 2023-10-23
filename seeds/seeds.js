@@ -24,11 +24,11 @@ const seedDatabase = async () => {
       returning: true,
     });
     
-    for (let i=0; i < 20; i++) {
+    for (let i=0; i < 10; i++) {
       await Pairing.create({
-        food_id: foods[Math.floor(Math.random()*foods.length)].food_id,
-        wine_id: wines[Math.floor(Math.random()*wines.length)].wine_id,
-        // user_id: users[Math.floor(Math.random()*users.length)].user_id
+        food_id: foods[Math.floor(Math.random()*foods.length)].id,
+        wine_id: wines[Math.floor(Math.random()*wines.length)].id,
+        user_id: users[Math.floor(Math.random()*users.length)].id
       })
     }
     process.exit(0);
