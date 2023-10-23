@@ -5,7 +5,7 @@ class Food extends Model {}
 
 Food.init(
     {
-        food_id:{
+        id:{
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,

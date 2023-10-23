@@ -7,38 +7,16 @@ router.get('/', (req, res) => {
 });
 
 router.get('/home', async (req, res) => {
-try{
-    const pairingData = await Food.findAll({
-        include: [
-            // {
-            // model: User,
-            // attributes: ['name'],
-            // },
-            // {
-            // model: Wine,
-            // attributes: 
-            //             ['name']
-            //             ['type']
-            //             ['price']
-            //             ['description']
-            // },
-            {
-            model: Wine,
-            through: Pairing,
-            // attributes: 
-            //             ['name']
-            //             ['type']
-            //             ['price']
-            //             ['description']
-            },
-        ],
-    }
-    );
+    try {
+        const pairingData = await Pairing.findAll({
+            include: [{model: Wine}],
+            // include: [{model: Wine, through: Pairing}]
+          });
 
-    const pairings = pairingData.map((pairing) => pairing.get({ plain: true }));
-    // console.log(pairings);
-    res.json(pairings);
-    // res.render('homepage', { pairings, logged_in: req.session.logged_in });
+        const pairings = pairingData.map((pairing) => pairing.get({ plain: true }));
+        console.log(pairings);
+        res.json(pairings);
+        // res.render('homepage', { pairings, logged_in: req.session.logged_in });
 
     } catch (err) {
         res.status(500).json(err);
