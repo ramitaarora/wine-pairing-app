@@ -1,3 +1,5 @@
 const Wine = require('./Wine')
 
-module.exports = {Wine};
+const Food = require('./Food');
+
+module.exports = { Food, Wine };

@@ -1,16 +1,25 @@
 const sequelize = require('../config/connection');
-const { Wine } = require('../models/Wine');
-
+const foodData = require('./foodData.json');
 const wineData = require('./wineData.json');
+// const userData = require('./userData.json');
+
+
+const { Food, Wine } = require('../models');
+
 
 const seedDatabase = async () => {
-  await sequelize.sync({ force: true });
+    await sequelize.sync({ force: true });
 
-    await Wine.bulkCreate(wineData)
+    // await User.bulkCreate(userData, {
+    //     individualHooks: true,
+    //     returning: true,
+    //   });
+
+    await Food.bulkCreate(foodData);
+
+    await Wine.bulkCreate(wineData);
     
     process.exit(0);
-  }
-
-
+};
 
 seedDatabase();
