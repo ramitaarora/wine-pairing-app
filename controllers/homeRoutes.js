@@ -9,12 +9,16 @@ router.get('/', (req, res) => {
 router.get('/home', async (req, res) => {
     try {
         const pairingData = await Pairing.findAll({
-            include: [{model: Wine}],
-            // include: [{model: Wine, through: Pairing}]
-          });
+            attributes: ['pairing_id'],
+            include: [
+            { model: Wine, attributes: ['wine_name'] },
+            { model: Food, attributes: ['food_name'] },
+            { model: User, attributes: ['name'] }
+            ]
+            })
 
         const pairings = pairingData.map((pairing) => pairing.get({ plain: true }));
-        console.log(pairings);
+        // console.log(pairings);
         res.json(pairings);
         // res.render('homepage', { pairings, logged_in: req.session.logged_in });
 
