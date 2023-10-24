@@ -11,6 +11,24 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET white or red wines
+router.get('/:wine_type', async (req, res) => {
+  try {
+    if (req.params.wine_type = 'white') {
+      const wineData = await Wine.findAll({where: {"wine_white": true}})
+      console.log(wineData);
+      res.json(wineData);
+
+    } else if (req.params.wine_type = 'red') {
+      const wineData = await Wine.findAll({where: {"wine_white": false}})
+      console.log(wineData);
+      res.json(wineData);
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 // GET a single Wine  /api/wine/:id
 router.get('/:id', async (req, res) => {
   try {
