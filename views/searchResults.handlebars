@@ -12,7 +12,6 @@
                         <thead>
                             <tr>
                                 <th>Wine Name</th>
-                                <th>Wine Description</th>
                                 <th>Best with</th>
                                 <th>Food Description</th>
                             </tr>
@@ -21,7 +20,6 @@
                             {{#each winePairings as |pairing|}}
                             <tr>
                                 <td>{{pairing.wine.wine_name}}</td>
-                                <td>{{pairing.wine.wine_description}}</td>
                                 <td>{{pairing.food.food_name}}</td>
                                 <td>{{pairing.food.food_description}}</td>
                             </tr>

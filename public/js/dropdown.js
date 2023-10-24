@@ -38,7 +38,7 @@ whiteRedSelection.addEventListener('change', async function(event) {
 
 secondDropdownWine.addEventListener('change', async function(event) {
   event.preventDefault();
-  document.location.replace(`/search/${event.target.value}`);
+  document.location.replace(`/search/wine/${event.target.value}`);
 })
 
 
@@ -136,3 +136,8 @@ mealTypeSelection.addEventListener('change', async function(event) {
     });
   }
 });
+
+secondDropdownMeal.addEventListener('change', async function(event) {
+  event.preventDefault();
+  document.location.replace(`/search/food/${event.target.value}`);
+})

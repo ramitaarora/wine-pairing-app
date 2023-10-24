@@ -10,15 +10,21 @@ router.get('/', (req, res) => {
     }
 });
 
-router.get('/search/:wine_type', async (req, res) => {
-    // console.log(req.body.wine);
+router.get('/search/wine/:wine_type', async (req, res) => {
     const wineId = await Wine.findAll({ where: { wine_type: req.params.wine_type } });
     const winePairing = await Pairing.findAll({where: {wine_id: wineId[0].id},  
         include: [{ model: Food}, {model: Wine}]});
     const winePairings = winePairing.map(wine => wine.get({ plain: true }));
-    console.log({winePairings})
     res.render('searchResults', {winePairings})
-    // res.json(winePairing)
+});
+
+router.get('/search/food/:food_name', async (req, res) => {
+    const foodId = await Food.findAll({ where: { food_name: req.params.food_name } });
+    const foodIds = foodId.map(food => food.get({ plain: true }));
+    const winePairing = await Pairing.findAll({where: {food_id: foodIds[0].id},  
+        include: [{ model: Food}, {model: Wine}]});
+    const winePairings = winePairing.map(wine => wine.get({ plain: true }));
+    res.render('searchResults', {winePairings})
 });
 
 router.get('/home', async (req, res) => {
