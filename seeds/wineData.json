@@ -1,5 +1,4 @@
 [
-//1
    {
         "wine_name": "Gallo Family Vineyards",
         "wine_type": "Pinot Noir",
@@ -8,7 +7,6 @@
         "wine_white": false,
         "wine_price": 5
     },
-//2 
    {
         "wine_name": "2019 Zorzal Eggo Franco",
         "wine_type": "Cabernet Franc",
@@ -17,7 +15,6 @@
         "wine_white": false,
         "wine_price": 27
     },
-//3 
    {
         "wine_name": "2019 Chateau Ollieux Romanis",
         "wine_type": "Corbieres-Boutenac Atal Sia",
@@ -26,7 +23,6 @@
         "wine_white": false,
         "wine_price": 23
     },
-//4 
    {
         "wine_name": "2022 Chateau La Gaffeliere",
         "wine_type": "Merlot",
@@ -35,7 +31,6 @@
         "wine_white": false,
         "wine_price": 77
     },
-//5 
   {
         "wine_name": "2020 Valli Bannockburn Vineyard",
         "wine_type": "Pinot Noir",
@@ -44,7 +39,6 @@
         "wine_white": false,
         "wine_price": 46
     },
-//6 
   {
         "wine_name": "2016 Cantina Terlano-Kellerei Terlan 'Vorberg' Riserva Pinot Bianco Alto Adige",
         "wine_type": "Pinot Blanc",
@@ -53,7 +47,6 @@
         "wine_white": true,
         "wine_price": 55
     },
-//7 
   {
         "wine_name": "2018 Domaine Zind-Humbrecht Riesling Brand",
         "wine_type": "Riesling",
@@ -62,7 +55,6 @@
         "wine_white": true,
         "wine_price": 62
     },
-//8 
   {
         "wine_name": "Moet & Chandon Grand Vintage Brut",
         "wine_type": "Champagne Blend",
@@ -72,7 +64,6 @@
         "wine_sparkling": true,
         "wine_price": 105
     },
-//9 
   {
         "wine_name": "The Sadie Family Die Ouwingerdreeks 'Skerpioen' White",
         "wine_type": "White Blend",
@@ -81,7 +72,6 @@
         "wine_white": true,
         "wine_price": 96
     },
-//10
    {
         "wine_name": "Azienda Agricola Serragghia Bianco Zibibbo Secco",
         "wine_type": "Muscat of Alexandria",

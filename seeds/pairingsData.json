@@ -1,42 +1,68 @@
 [
-    {
-        "wine_id": 1,
-        "food_id": [1, 2, 28]
-    },
-    {
-        "wine_id": 2,
-        "food_id": [10, 11, 6, 7, 9, 12, 19]
-    },
-    {
-        "wine_id": 3,
-        "food_id": [6, 5, 24, 7, 9, 19]
-    },
-    {
-        "wine_id": 4,
-        "food_id": [10, 11, 13, 39, 7, 12, 9, 19]
-    },
-    {
-        "wine_id": 5,
-        "food_id": [6, 5, 24, 7, 9]
-    },
-    {
-        "wine_id": 6,
-        "food_id": [22, 28, 30, 31, 32, 33, 34]
-    },
-    {
-        "wine_id": 7,
-        "food_id": [29, 27, 21, 41, 42, 8, 26, 15]
-    },
-    {
-        "wine_id": 8,
-        "food_id": [26, 30, 31, 32, 33, 34, 35, 36, 45,46,47]
-    },
-    {
-        "wine_id": 9,
-        "food_id": [26, 35, 36, 22,43]
-    },
-    {
-        "wine_id": 10,
-        "food_id": [15, 21, 37, 38, 39, 44]
-    }
+    { "wine_id": 1, "food_id": 1 },
+    { "wine_id": 1, "food_id": 2 },
+    { "wine_id": 1, "food_id": 28 },
+    { "wine_id": 2, "food_id": 10 },
+    { "wine_id": 2, "food_id": 11 },
+    { "wine_id": 2, "food_id": 6 },
+    { "wine_id": 2, "food_id": 7 },
+    { "wine_id": 2, "food_id": 9 },
+    { "wine_id": 2, "food_id": 12 },
+    { "wine_id": 2, "food_id": 19 },
+    { "wine_id": 3, "food_id": 6 },
+    { "wine_id": 3, "food_id": 5 },
+    { "wine_id": 3, "food_id": 24 },
+    { "wine_id": 3, "food_id": 7 },
+    { "wine_id": 3, "food_id": 9 },
+    { "wine_id": 3, "food_id": 19 },
+    { "wine_id": 4, "food_id": 10 },
+    { "wine_id": 4, "food_id": 11 },
+    { "wine_id": 4, "food_id": 13 },
+    { "wine_id": 4, "food_id": 39 },
+    { "wine_id": 4, "food_id": 7 },
+    { "wine_id": 4, "food_id": 12 },
+    { "wine_id": 4, "food_id": 9 },
+    { "wine_id": 4, "food_id": 19 },
+    { "wine_id": 5, "food_id": 6 },
+    { "wine_id": 5, "food_id": 5 },
+    { "wine_id": 5, "food_id": 24 },
+    { "wine_id": 5, "food_id": 7 },
+    { "wine_id": 5, "food_id": 9 },
+    { "wine_id": 6, "food_id": 22 },
+    { "wine_id": 6, "food_id": 28 },
+    { "wine_id": 6, "food_id": 30 },
+    { "wine_id": 6, "food_id": 31 },
+    { "wine_id": 6, "food_id": 32 },
+    { "wine_id": 6, "food_id": 33 },
+    { "wine_id": 6, "food_id": 34 },
+    { "wine_id": 7, "food_id": 29 },
+    { "wine_id": 7, "food_id": 27 },
+    { "wine_id": 7, "food_id": 21 },
+    { "wine_id": 7, "food_id": 41 },
+    { "wine_id": 7, "food_id": 42 },
+    { "wine_id": 7, "food_id": 8 },
+    { "wine_id": 7, "food_id": 26 },
+    { "wine_id": 7, "food_id": 15 },
+    { "wine_id": 8, "food_id": 26 },
+    { "wine_id": 8, "food_id": 30 },
+    { "wine_id": 8, "food_id": 31 },
+    { "wine_id": 8, "food_id": 32 },
+    { "wine_id": 8, "food_id": 33 },
+    { "wine_id": 8, "food_id": 34 },
+    { "wine_id": 8, "food_id": 35 },
+    { "wine_id": 8, "food_id": 36 },
+    { "wine_id": 8, "food_id": 45 },
+    { "wine_id": 8, "food_id": 46 },
+    { "wine_id": 8, "food_id": 47 },
+    { "wine_id": 9, "food_id": 26 },
+    { "wine_id": 9, "food_id": 35 },
+    { "wine_id": 9, "food_id": 36 },
+    { "wine_id": 9, "food_id": 22 },
+    { "wine_id": 9, "food_id": 43 },
+    { "wine_id": 10, "food_id": 15 },
+    { "wine_id": 10, "food_id": 21 },
+    { "wine_id": 10, "food_id": 37 },
+    { "wine_id": 10, "food_id": 38 },
+    { "wine_id": 10, "food_id": 39 },
+    { "wine_id": 10, "food_id": 44 }
 ]

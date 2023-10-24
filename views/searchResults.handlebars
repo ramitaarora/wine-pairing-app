@@ -16,10 +16,12 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {{#each winePairings as |pairing|}}
                             <tr>
-                                <td>Gallo Family Vineyards</td>
-                                <td>Chicken or turkey</td>
+                                <td>{{pairing.wine.wine_name}}</td>
+                                <td>{{pairing.food.food_name}}</td>
                             </tr>
+                            {{/each}}
                             <tr>
                                 <td>2018 Domaine Zind-Humbrecht Riesling Brand</td>
                                 <td>Meaty and oily fish</td>

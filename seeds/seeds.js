@@ -2,6 +2,7 @@ const sequelize = require('../config/connection');
 const foodData = require('./foodData.json');
 const wineData = require('./wineData.json');
 const userData = require('./userData.json');
+const pairingData = require('./pairingsData.json');
 
 const { Food, Wine, User, Pairing } = require('../models');
 
@@ -13,7 +14,7 @@ const seedDatabase = async () => {
         individualHooks: true,
         returning: true,
       });
-      // console.log(users);
+
     const foods = await Food.bulkCreate(foodData, {
       individualHooks: true,
       returning: true,
@@ -24,7 +25,7 @@ const seedDatabase = async () => {
       returning: true,
     });
 
-    const pairings = await Pairing.bulkCreate(wineData, {
+    const pairings = await Pairing.bulkCreate(pairingData, {
       individualHooks: true,
       returning: true,
     });

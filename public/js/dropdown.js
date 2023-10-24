@@ -3,7 +3,8 @@ const whiteRedSelection = document.getElementById('wine-dropdown-choice');
 const secondDropdownWine = document.getElementById('second-dropdown-wine-choice');
 
 // Add event listener to the first dropdown
-whiteRedSelection.addEventListener('change', async function() {
+whiteRedSelection.addEventListener('change', async function(event) {
+  event.preventDefault();
   // Get the selected value from the first dropdown
   const selectedValue = whiteRedSelection.value;
   console.log(selectedValue)
@@ -41,7 +42,18 @@ whiteRedSelection.addEventListener('change', async function() {
   }
 });
 
+secondDropdownWine.addEventListener('change', async function(event) {
+  event.preventDefault();
+  // console.log(event.target.value);
+  
+  // const data = await fetch('search/', {
+  //   method: 'POST',
+  //   body: JSON.stringify({"wine": `${event.target.value}`}),
+  //     headers: { 'Content-Type': 'application/json' },
+  // });
+  document.location.replace(`/search/${event.target.value}`)
 
+})
 
 
 // Get references to the dropdown menus
@@ -49,7 +61,8 @@ const mealTypeSelection = document.getElementById('food-dropdown-choice');
 const secondDropdownMeal = document.getElementById('second-dropdown-meal-choice');
 
 // Add event listener to the first dropdown
-mealTypeSelection.addEventListener('change', function() {
+mealTypeSelection.addEventListener('change', function(event) {
+  event.preventDefault();
   // Get the selected value from the first dropdown
   const selectedValue = mealTypeSelection.value;
 
