@@ -13,21 +13,17 @@
                             <tr>
                                 <th>Wine Name</th>
                                 <th>Best with</th>
+                                <th>Food Description</th>
                             </tr>
                         </thead>
                         <tbody>
+                            {{#each winePairings as |pairing|}}
                             <tr>
-                                <td>Gallo Family Vineyards</td>
-                                <td>Chicken or turkey</td>
+                                <td>{{pairing.wine.wine_name}}</td>
+                                <td>{{pairing.food.food_name}}</td>
+                                <td>{{pairing.food.food_description}}</td>
                             </tr>
-                            <tr>
-                                <td>2018 Domaine Zind-Humbrecht Riesling Brand</td>
-                                <td>Meaty and oily fish</td>
-                            </tr>
-                            <tr>
-                                <td>Moet & Chandon Grand Vintage Brut</td>
-                                <td>Shellfish, crab, and lobster</td>
-                            </tr>
+                            {{/each}}
                         </tbody>
                     </table>
                 </div>

@@ -1,183 +1,68 @@
-const fs = require('fs');
-
-const pairings = [
-    {
-        "wine_id": 1,
-        "food_id": [1, 2, 28]
-    },
-    {
-        "wine_id": 2,
-        "food_id": [10, 11, 6, 7, 9, 12, 19]
-    },
-    {
-        "wine_id": 3,
-        "food_id": [6, 5, 24, 7, 9, 19]
-    },
-    {
-        "wine_id": 4,
-        "food_id": [10, 11, 13, 39, 7, 12, 9, 19]
-    },
-    {
-        "wine_id": 5,
-        "food_id": [6, 5, 24, 7, 9]
-    },
-    {
-        "wine_id": 6,
-        "food_id": [22, 28, 30, 31, 32, 33, 34]
-    },
-    {
-        "wine_id": 7,
-        "food_id": [29, 27, 21, 41, 42, 8, 26, 15]
-    },
-    {
-        "wine_id": 8,
-        "food_id": [26, 30, 31, 32, 33, 34, 35, 36, 45,46,47]
-    },
-    {
-        "wine_id": 9,
-        "food_id": [26, 35, 36, 22,43]
-    },
-    {
-        "wine_id": 10,
-        "food_id": [15, 21, 37, 38, 39, 44]
-    },
-];
-
-const jsonData = JSON.stringify(pairings, null, 4);
-
-fs.writeFile('pairings.json', jsonData, (err) => {
-    if (err) {
-        console.error(err);
-    } else {
-        console.log('pairings.json file created successfully');
-    }
-});
-
-
-
-// Red Wine Pairings:
-
-// Gallo Family Vineyards Pinot Noir:
-
-// Chicken (ID: 1)
-// Turkey (ID: 2)
-// Salmon (ID: 28)
-
-// 2019 Zorzal Eggo Franco Cabernet Franc:
-
-// Beef (ID: 10)
-// Venison (ID: 11)
-// Lamb (ID: 6)
-// Pork (ID: 7)
-// Bison (ID: 12)
-// Lamb Chops (ID: 9)
-// Venison Stew (ID: 19)
-
-// 2019 Chateau Ollieux Romanis Corbieres-Boutenac Atal Sia:
-
-// Lamb (ID: 6)
-// Game Birds (ID: 5)
-// Root Vegetables (ID: 24)
-// Pork (ID: 7)
-// Lamb Chops (ID: 9)
-// Venison Stew (ID: 19)
-
-// 2022 Chateau La Gaffeliere Merlot:
-
-// Beef (ID: 10)
-// Venison (ID: 11)
-// Boar (ID: 13)
-// cheddar (ID: 39)
-// Pork (ID: 7)
-// Bison (ID: 12)
-// Lamb Chops (ID: 9)
-// Venison Stew (ID: 19)
-
-// 2020 Valli Bannockburn Vineyard Pinot Noir:
-
-// Duck (ID: 3)
-// Goose (ID: 4)
-// Quail (ID: 21)
-// Gruyere (ID: 40)
-// Pork (ID: 7)
-//Lamb Chops (ID: 9)
-
-// White Wine Pairings:
-
-// 2016 Cantina Terlano-Kellerei Terlan 'Vorberg' Riserva Pinot Bianco Alto Adige:
-
-// White Fish (ID: 28)
-// Shellfish (ID: 30, 31, 32, 33, 34)
-// Salads (ID: 22)
-
-// 2018 Domaine Zind-Humbrecht Riesling Brand:
-
-// Meaty and Oily Fish (ID: 29)
-// Spicy Vegetables (ID: 27)
-// Asian Cuisine (ID: 21)
-// Blue Cheese (ID: 41)
-// Brie (ID: 42)
-// Goat (ID: 8)
-// Spicy Seafood (ID: 26)
-// Spicy Asian Noodles (ID: 15)
-
-// Moet & Chandon Grand Vintage Brut Champagne Blend:
-
-// Shellfish (ID: 30, 31, 32, 33, 34)
-// Goat Cheese (ID: 35)
-// Feta (ID: 36)
-// Spicy Seafood (ID: 26)
-
-// The Sadie Family Die Ouwingerdreeks 'Skerpioen' White Blend:
-
-// Goat Cheese (ID: 35)
-// Feta (ID: 36)
-// Salads (ID: 22)
-// Camembert (ID: 43)
-// Spicy Seafood (ID: 26)
-
-// Azienda Agricola Serragghia Bianco Zibibbo Secco Muscat of Alexandria:
-
-// Hard Cheese (ID: 38, 39)
-// Manchego (ID: 37)
-// Spicy Pasta (ID: 21)
-
-
-//Dessert Wine Pairings:
-
-//Azienda Agricola Serragghia Bianco Zibibbo Secco Muscat of Alexandria
-//Spicy Asian Noodles (ID: 15)
-//Fruit-based Desserts (ID: 44)
-
-//Moet & Chandon Grand Vintage Brut Champagne Blend
-
-// Chocolate and Caramel (ID: 45)
-// Baked Goods (ID: 46)
-// Cakes (ID: 47)
-
-
-
-
-// Red Wine Pairings:
-
-// Gallo Family Vineyards Pinot Noir: Pair this light and perfumed Pinot Noir with roasted chicken, turkey breast, or grilled salmon.
-
-// 2019 Zorzal Eggo Franco Cabernet Franc: This bold and structured Cabernet Franc complements grilled or braised beef, venison steaks, or lamb chops.
-
-// 2019 Chateau Ollieux Romanis Corbieres-Boutenac Atal Sia: The rich and intense flavors of this wine pair well with roasted lamb, hearty stews, or grilled game meats.
-
-// 2022 Chateau La Gaffeliere Merlot: This savory and classic Merlot is a perfect match for grilled or roasted beef, venison medallions, or braised short ribs.
-
-// 2020 Valli Bannockburn Vineyard Pinot Noir: Enjoy this bold and structured Pinot Noir alongside roasted duck breast, grilled quail, or pan-seared squab.
-
-// White Wine Pairings:
-
-// 2016 Cantina Terlano-Kellerei Terlan 'Vorberg' Riserva Pinot Bianco Alto Adige: This green and flinty Pinot Blanc pairs beautifully with grilled or baked white fish, shellfish dishes, or light pasta salads.
-
-// 2018 Domaine Zind-Humbrecht Riesling Brand: The vibrant acidity and minerality of this Riesling complement meaty and oily fish like salmon, tuna, or mackerel.
-
-// Moet & Chandon Grand Vintage Brut Champagne Blend: This complex and traditional Champagne pairs perfectly with shellfish, crab cakes, or lobster dishes.
-
-// The Sadie Family Die Ouwingerdreeks 'Skerpioen' White Blend: Enjoy this green and flinty white blend alongside goat cheese salads, feta-topped pizzas, or grilled halloumi skewers.
-
-// Azienda Agricola Serragghia Bianco Zibibbo Secco Muscat of Alexandria: This aromatic and floral Muscat complements aged cheddar, Gruyère cheese, or a cheese platter with dried fruits and nuts.
+[
+    { "wine_id": 1, "food_id": 1 },
+    { "wine_id": 1, "food_id": 2 },
+    { "wine_id": 1, "food_id": 28 },
+    { "wine_id": 2, "food_id": 10 },
+    { "wine_id": 2, "food_id": 11 },
+    { "wine_id": 2, "food_id": 6 },
+    { "wine_id": 2, "food_id": 7 },
+    { "wine_id": 2, "food_id": 9 },
+    { "wine_id": 2, "food_id": 12 },
+    { "wine_id": 2, "food_id": 19 },
+    { "wine_id": 3, "food_id": 6 },
+    { "wine_id": 3, "food_id": 5 },
+    { "wine_id": 3, "food_id": 24 },
+    { "wine_id": 3, "food_id": 7 },
+    { "wine_id": 3, "food_id": 9 },
+    { "wine_id": 3, "food_id": 19 },
+    { "wine_id": 4, "food_id": 10 },
+    { "wine_id": 4, "food_id": 11 },
+    { "wine_id": 4, "food_id": 13 },
+    { "wine_id": 4, "food_id": 39 },
+    { "wine_id": 4, "food_id": 7 },
+    { "wine_id": 4, "food_id": 12 },
+    { "wine_id": 4, "food_id": 9 },
+    { "wine_id": 4, "food_id": 19 },
+    { "wine_id": 5, "food_id": 6 },
+    { "wine_id": 5, "food_id": 5 },
+    { "wine_id": 5, "food_id": 24 },
+    { "wine_id": 5, "food_id": 7 },
+    { "wine_id": 5, "food_id": 9 },
+    { "wine_id": 6, "food_id": 22 },
+    { "wine_id": 6, "food_id": 28 },
+    { "wine_id": 6, "food_id": 30 },
+    { "wine_id": 6, "food_id": 31 },
+    { "wine_id": 6, "food_id": 32 },
+    { "wine_id": 6, "food_id": 33 },
+    { "wine_id": 6, "food_id": 34 },
+    { "wine_id": 7, "food_id": 29 },
+    { "wine_id": 7, "food_id": 27 },
+    { "wine_id": 7, "food_id": 21 },
+    { "wine_id": 7, "food_id": 41 },
+    { "wine_id": 7, "food_id": 42 },
+    { "wine_id": 7, "food_id": 8 },
+    { "wine_id": 7, "food_id": 26 },
+    { "wine_id": 7, "food_id": 15 },
+    { "wine_id": 8, "food_id": 26 },
+    { "wine_id": 8, "food_id": 30 },
+    { "wine_id": 8, "food_id": 31 },
+    { "wine_id": 8, "food_id": 32 },
+    { "wine_id": 8, "food_id": 33 },
+    { "wine_id": 8, "food_id": 34 },
+    { "wine_id": 8, "food_id": 35 },
+    { "wine_id": 8, "food_id": 36 },
+    { "wine_id": 8, "food_id": 45 },
+    { "wine_id": 8, "food_id": 46 },
+    { "wine_id": 8, "food_id": 47 },
+    { "wine_id": 9, "food_id": 26 },
+    { "wine_id": 9, "food_id": 35 },
+    { "wine_id": 9, "food_id": 36 },
+    { "wine_id": 9, "food_id": 22 },
+    { "wine_id": 9, "food_id": 43 },
+    { "wine_id": 10, "food_id": 15 },
+    { "wine_id": 10, "food_id": 21 },
+    { "wine_id": 10, "food_id": 37 },
+    { "wine_id": 10, "food_id": 38 },
+    { "wine_id": 10, "food_id": 39 },
+    { "wine_id": 10, "food_id": 44 }
+]

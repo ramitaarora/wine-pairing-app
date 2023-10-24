@@ -11,6 +11,71 @@ router.get('/', async (req, res) => {
     }
 });
 
+//GET routes for dropdown menu
+router.get('/white-meat', async (req, res) => {
+    try {
+      const foodData = await Food.findAll({where: { food_type: 'White Meats'}})
+        res.json(foodData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  })
+
+router.get('/red-meat', async (req, res) => {
+    try {
+        const foodData = await Food.findAll({where: { food_type: 'Red Meats'}})
+        res.json(foodData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/pasta', async (req, res) => {
+    try {
+        const foodData = await Food.findAll({where: { food_type: 'Pasta'}})
+        res.json(foodData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+}
+)
+
+router.get('/vegetables', async (req, res) => {
+    try {
+        const foodData = await Food.findAll({where: { food_type: 'Vegetables'}})
+        res.json(foodData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/seafood', async (req, res) => {
+    try {
+        const foodData = await Food.findAll({where: { food_type: 'Seafood'}})
+        res.json(foodData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/cheese', async (req, res) => {
+    try {
+        const foodData = await Food.findAll({where: { food_type: 'Cheese'}})
+        res.json(foodData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/dessert', async (req, res) => {
+    try {
+        const foodData = await Food.findAll({where: { food_type: 'Dessert'}})
+        res.json(foodData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 router.get('/:food_id', async (req, res) => {
     try {
         const foodData = await Food.findByPk(req.params.food_id);
