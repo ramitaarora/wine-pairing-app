@@ -10,22 +10,6 @@ router.get('/', (req, res) => {
     }
 });
 
-router.get('/home', (req, res) => {
-    if (req.session.logged_in) {
-        res.render('homepage', {logged_in: true});
-    } else {
-        document.location.replace('/');
-    }
-});
-
-router.get('/search', (req, res) => {
-    if (req.session.logged_in) {
-        res.render('searchResults', {logged_in: true});
-    } else {
-        document.location.replace('/');
-    }
-});
-
 // router.get('/home', async (req, res) => {
 //     try {
 //         const pairingData = await Pairing.findAll({
