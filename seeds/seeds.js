@@ -23,14 +23,19 @@ const seedDatabase = async () => {
       individualHooks: true,
       returning: true,
     });
+
+    const pairings = await Pairing.bulkCreate(wineData, {
+      individualHooks: true,
+      returning: true,
+    });
     
-    for (let i=0; i < 10; i++) {
-      await Pairing.create({
-        food_id: foods[Math.floor(Math.random()*foods.length)].id,
-        wine_id: wines[Math.floor(Math.random()*wines.length)].id,
-        user_id: users[Math.floor(Math.random()*users.length)].id
-      })
-    }
+    // for (let i=0; i < 10; i++) {
+    //   await Pairing.create({
+    //     food_id: foods[Math.floor(Math.random()*foods.length)].id,
+    //     wine_id: wines[Math.floor(Math.random()*wines.length)].id,
+    //     user_id: users[Math.floor(Math.random()*users.length)].id
+    //   })
+    // }
     process.exit(0);
 };
 

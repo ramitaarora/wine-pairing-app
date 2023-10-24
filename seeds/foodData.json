@@ -1,53 +1,53 @@
 [
-    {
+   {
         "food_name": "Chicken",
         "food_type": "White Meats",
         "food_price": 10,
         "food_description": "Mild and versatile in flavor, often having a slightly savory or umami taste and is cooked until tender."
     },
-    {
+  {
         "food_name": "Turkey",
         "food_type": "White Meats",
         "food_price": 37.35,
         "food_description": "A bird with a slightly gamey and earthly flavor compared to chickens milder taste. It is also usually a bit drier due to its lower fat content."
     },
-    {   
+ {   
         "food_name": "Duck",
         "food_type": "White Meats",
         "food_price": 45,
         "food_description": "A stronger flavor, closer to red meat rather than chicken which renders a tender, moist and fatty protein."
     },
-    {
+{
         "food_name": "Goose",
         "food_type": "White Meats",
         "food_price": 65,
         "food_description": "It is a cross between chicken and duck, with a stronger gamier taste and is often compared to beef in the world of poultry."
-    },
-    {
+},
+   {
         "food_name": "Game Birds",
         "food_type": "White Meats",
         "food_price": 35,
         "food_description": "Rich and tangy in flavor, often described as earthy or musky. The darker the meat, the sweeter the taste."
     },
-    {
+   {
         "food_name": "Lamb",
         "food_type": "White Meats",
         "food_price": 35,
         "food_description": "Often described as 'gamey' or pastoral. Its flavor comes from the branch-chained fatty acids found in the fat of the lamb."
     },
-    {
+   {
         "food_name": "Rabbit",
         "food_type": "White Meats",
         "food_price": 30,
         "food_description": "A bit like chicken with stronger earth tones and somewhat 'gamey'."
     },
-    {
+   {
         "food_name": "Veal",
         "food_type": "White Meats",
         "food_price": 40,
         "food_description": "Delicate and mild in flavor, it is lean but has more fat than something like chicken"
     },
-    {
+  {
         "food_name": "Pork",
         "food_type": "Red Meats",
         "food_price": 15,
@@ -113,13 +113,13 @@
         "food_price": 18,
         "food_description": "Tasting usually of a butter, garlic, and white wine reduction, it invokes the memory of the sea from which it derives its protein from."
     },
-    {
+      {
         "food_name": "Vegetable pasta",
         "food_type": "Pasta",
         "food_price": 12,
         "food_description": "Light and fresh, it offers some balance to what is usually considered a heavier pairing with pasta itself."
     },
-    {
+      {
         "food_name": "Spicy pasta",
         "food_type": "Pasta",
         "food_price": 13,
@@ -179,7 +179,7 @@
         "food_price": 17,
         "food_description": "A subtle briny taste, often described as mildy sweet compared to its fishier counter-parts."
     },
-    {
+     {
         "food_name": "Crab",
         "food_type": "Seafood Shellfish",
         "food_price": 23,
@@ -251,7 +251,7 @@
         "food_price": 6,
         "food_description": "A soothing and mellow flavor, Brie has a hint of nuttiness but its flavor profile is suble enough that it can be overwhelmed if paired with stronger flavor profiles."
     },
-    {
+  {
         "food_name": "Camembert",
         "food_type": "Soft Cheese",
         "food_price": 20,
@@ -269,7 +269,7 @@
         "food_price": 16,
         "food_description": "Ranging from bitter darker chocolate to a sweet or semi-sweet milk chocolate, this flavor profile offers something sweet which is a unqiue profile all its own. Caramel is often sweet or extremely sweet and a little amount can go a long way flavor-wise."
     },
-    {
+   {
         "food_name": "Baked Goods",
         "food_type": "Dessert",
         "food_price": 9,
