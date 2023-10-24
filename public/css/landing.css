@@ -3,6 +3,7 @@
 }
 
 body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: var(--primary);
     color: white;
     margin: 0;
@@ -46,13 +47,17 @@ img {
 }
 
 #forms {
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#login, #signup {
+    margin: 20px;
 }
 
 form {

@@ -14,26 +14,26 @@ router.get('/search', (req, res) => {
     res.render('searchResults', {logged_in: true});
 });
 
-router.get('/home', async (req, res) => {
-    try {
-        const pairingData = await Pairing.findAll({
-            attributes: ['pairing_id'],
-            include: [
-            { model: Wine, attributes: ['wine_name'] },
-            { model: Food, attributes: ['food_name'] },
-            { model: User, attributes: ['name'] }
-            ]
-            })
+// router.get('/home', async (req, res) => {
+//     try {
+//         const pairingData = await Pairing.findAll({
+//             attributes: ['pairing_id'],
+//             include: [
+//             { model: Wine, attributes: ['wine_name'] },
+//             { model: Food, attributes: ['food_name'] },
+//             { model: User, attributes: ['name'] }
+//             ]
+//             })
 
-        const pairings = pairingData.map((pairing) => pairing.get({ plain: true }));
-        // console.log(pairings);
-        res.json(pairings);
-        // res.render('homepage', { pairings, logged_in: req.session.logged_in });
+//         const pairings = pairingData.map((pairing) => pairing.get({ plain: true }));
+//         // console.log(pairings);
+//         res.json(pairings);
+//         // res.render('homepage', { pairings, logged_in: req.session.logged_in });
 
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
 router.get('/pairing/:id', async (req, res) => { //??????
     try{
