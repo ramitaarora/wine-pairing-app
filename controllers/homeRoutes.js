@@ -3,7 +3,15 @@ const { Food, Wine, Pairing, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
-    res.render('landingPage');
+    res.render('landingPage', {logged_in: false});
+});
+
+router.get('/home', (req, res) => {
+    res.render('homepage', {logged_in: true});
+});
+
+router.get('/search', (req, res) => {
+    res.render('searchResults', {logged_in: true});
 });
 
 router.get('/home', async (req, res) => {

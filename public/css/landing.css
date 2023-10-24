@@ -9,6 +9,16 @@ body {
     padding: 0;
 }
 
+footer {
+    text-align: center;
+    background-color: white;
+    color: var(--primary);
+}
+
+footer p {
+    padding: 10px;
+}
+
 header {
     text-align: center;
     font-size: 200%;
