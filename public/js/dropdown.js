@@ -9,8 +9,9 @@ whiteRedSelection.addEventListener('change', async function() {
   console.log(selectedValue)
   // Generate options for the second dropdown based on the selected value
   let options = [];
+
   if (selectedValue === 'white') {
-    // options = ['Sauvignon Blanc', 'Pinot Grigio', 'Riesling', 'Chardonnay', 'Champagne', 'Prosecco'];
+    secondDropdownWine.innerHTML = '';
     const optionsData = await fetch('/api/wine/white');
     // console.log(optionsData);
     const data = await optionsData.json();
@@ -24,14 +25,20 @@ whiteRedSelection.addEventListener('change', async function() {
     });
 
   } else if (selectedValue === 'red') {
-    options = ['Rose', 'Pinot Noir', 'Zinfandel', 'Merlot', 'Red Blend', 'Cabernet Sauvignon', 'Malbec', 'Syrah'];
+    secondDropdownWine.innerHTML = '';
+    // options = ['Rose', 'Pinot Noir', 'Zinfandel', 'Merlot', 'Red Blend', 'Cabernet Sauvignon', 'Malbec', 'Syrah'];
+    const optionsData = await fetch('/api/wine/red');
+    // console.log(optionsData);
+    const data = await optionsData.json();
+    console.log(data)
+    // Add new options to the second dropdown
+    data.forEach(function(option) {
+      const newOption = document.createElement('option');
+      newOption.textContent = option.wine_type;
+      newOption.value = option.wine_type;
+      secondDropdownWine.append(newOption);
+    });
   }
-
-  // Clear existing options in the second dropdown
-  // secondDropdownWine.innerHTML = '';
-
-  
-  
 });
 
 
