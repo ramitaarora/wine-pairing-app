@@ -1,14 +1,3 @@
-:root {
-    --primary: rgb(84, 0, 78);
-}
-
-body {
-    background-color: var(--primary);
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
 header {
     text-align: center;
     font-size: 200%;
@@ -36,13 +25,17 @@ img {
 }
 
 #forms {
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#login, #signup {
+    margin: 20px;
 }
 
 form {

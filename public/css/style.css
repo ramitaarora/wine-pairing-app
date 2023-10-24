@@ -2,8 +2,21 @@
     --primary: rgb(84, 0, 78);
 }
 
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--primary);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
 footer {
     text-align: center;
-    background-color: var(--primary);
-    box-shadow: 3px 3px 10px rgb(0, 0, 0);
+    background-color: white;
+    color: var(--primary);
+    width: 100vw;
+}
+
+footer p {
+    padding: 10px;
 }
