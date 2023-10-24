@@ -3,15 +3,27 @@ const { Food, Wine, Pairing, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
-    res.render('landingPage', {logged_in: false});
+    if (!req.session.logged_in) {
+        res.render('landingPage', {logged_in: false});
+    } else {
+        document.location.replace('/home');
+    }
 });
 
 router.get('/home', (req, res) => {
-    res.render('homepage', {logged_in: true});
+    if (req.session.logged_in) {
+        res.render('homepage', {logged_in: true});
+    } else {
+        document.location.replace('/');
+    }
 });
 
 router.get('/search', (req, res) => {
-    res.render('searchResults', {logged_in: true});
+    if (req.session.logged_in) {
+        res.render('searchResults', {logged_in: true});
+    } else {
+        document.location.replace('/');
+    }
 });
 
 // router.get('/home', async (req, res) => {
