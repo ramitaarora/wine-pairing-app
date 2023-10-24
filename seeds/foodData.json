@@ -205,55 +205,55 @@
     },
     {
         "food_name": "Goat Cheese",
-        "food_type": "Soft Cheese",
+        "food_type": "Cheese",
         "food_price": 15,
         "food_description": "The flavor profile is tart, with a soft spreadable texture. It has tangy and earthy tones which compliment many dishes."
     },
     {
         "food_name": "Feta",
-        "food_type": "Soft Cheese",
+        "food_type": "Cheese",
         "food_price": 12,
         "food_description": "It has a tangy, slightly salty and mildly sour taste that recalls pepper and ginger, with just a hint of sweetness."
     },
     {
         "food_name": "Manchego",
-        "food_type": "Semi-Hard Cheese",
+        "food_type": "Cheese",
         "food_price": 23,
         "food_description": "Savory, tangy, and slightly sweet in taste which leaves a creamy nutty taste on the palette."
     },
     {
         "food_name": "Parmesan",
-        "food_type": "Hard Cheese",
+        "food_type": "Cheese",
         "food_price": 19,
         "food_description": "Rich, tangy, nutty, sharp, fruity, and bold are all common descriptions of this hard cheese."
     },
     {
         "food_name": "Cheddar",
-        "food_type": "Hard Cheese",
+        "food_type": "Cheese",
         "food_price": 6, 
         "food_description": "Mild cheddar is smooth with a subtle buttery taste. Medium cheddar has a stronger profile. White cheddar has a tangy and robust taste."
     },
     {
         "food_name": "Gruyere",
-        "food_type": "Semi-Hard Cheese",
+        "food_type": "Cheese",
         "food_price": 20,
         "food_description": "A rich, slightly nutty taste that derives from the cows milk found in Gruyere, Switzerland."
     },
     {
         "food_name": "Blue Cheese",
-        "food_type": "Semi-Soft Cheese",
+        "food_type": "Cheese",
         "food_price": 8,
         "food_description": "This cheese tastes salty, bright, and earthy. It is sometimes described as a bit funky and can contain black pepper notes depending on the cheese producer."
     },
     {
         "food_name": "Brie",
-        "food_type": "Soft Cheese",
+        "food_type": "Cheese",
         "food_price": 6,
         "food_description": "A soothing and mellow flavor, Brie has a hint of nuttiness but its flavor profile is suble enough that it can be overwhelmed if paired with stronger flavor profiles."
     },
   {
         "food_name": "Camembert",
-        "food_type": "Soft Cheese",
+        "food_type": "Cheese",
         "food_price": 20,
         "food_description": "Described as mushroomy, eggy, garlicky, nutty, or fruity, Camembet can have a variety of flavor profiles. Its soft and creamy texture also lends its rind to be edible as well."
     },

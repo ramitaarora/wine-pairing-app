@@ -7,16 +7,13 @@ whiteRedSelection.addEventListener('change', async function(event) {
   event.preventDefault();
   // Get the selected value from the first dropdown
   const selectedValue = whiteRedSelection.value;
-  console.log(selectedValue)
   // Generate options for the second dropdown based on the selected value
   let options = [];
 
   if (selectedValue === 'white') {
     secondDropdownWine.innerHTML = '';
     const optionsData = await fetch('/api/wine/white');
-    // console.log(optionsData);
     const data = await optionsData.json();
-    console.log(data)
     // Add new options to the second dropdown
     data.forEach(function(option) {
       const newOption = document.createElement('option');
@@ -27,11 +24,8 @@ whiteRedSelection.addEventListener('change', async function(event) {
 
   } else if (selectedValue === 'red') {
     secondDropdownWine.innerHTML = '';
-    // options = ['Rose', 'Pinot Noir', 'Zinfandel', 'Merlot', 'Red Blend', 'Cabernet Sauvignon', 'Malbec', 'Syrah'];
     const optionsData = await fetch('/api/wine/red');
-    // console.log(optionsData);
     const data = await optionsData.json();
-    console.log(data)
     // Add new options to the second dropdown
     data.forEach(function(option) {
       const newOption = document.createElement('option');
@@ -44,15 +38,7 @@ whiteRedSelection.addEventListener('change', async function(event) {
 
 secondDropdownWine.addEventListener('change', async function(event) {
   event.preventDefault();
-  // console.log(event.target.value);
-  
-  // const data = await fetch('search/', {
-  //   method: 'POST',
-  //   body: JSON.stringify({"wine": `${event.target.value}`}),
-  //     headers: { 'Content-Type': 'application/json' },
-  // });
-  document.location.replace(`/search/${event.target.value}`)
-
+  document.location.replace(`/search/${event.target.value}`);
 })
 
 
@@ -61,36 +47,92 @@ const mealTypeSelection = document.getElementById('food-dropdown-choice');
 const secondDropdownMeal = document.getElementById('second-dropdown-meal-choice');
 
 // Add event listener to the first dropdown
-mealTypeSelection.addEventListener('change', function(event) {
+mealTypeSelection.addEventListener('change', async function(event) {
   event.preventDefault();
   // Get the selected value from the first dropdown
   const selectedValue = mealTypeSelection.value;
-
   // Generate options for the second dropdown based on the selected value
   let options = [];
   if (selectedValue === 'White Meat') {
-    options = ['Chicken', 'Turkey', 'Duck', 'Goose', 'Game Birds', 'Lamb', 'Rabbit', 'Veal'];
+    secondDropdownMeal.innerHTML = '';
+    const optionsData = await fetch('/api/food/white-meat');
+    const data = await optionsData.json();
+    // Add new options to the second dropdown
+    data.forEach(function(option) {
+      console.log(option.food_name)
+      const newOption = document.createElement('option');
+      newOption.textContent = option.food_name;
+      newOption.value = option.food_name;
+      secondDropdownMeal.append(newOption);
+    });
     } else if (selectedValue === 'Red Meat') {
-    options = ['Pork', 'Beef', 'Venison', 'Mutton', 'Boar', 'Hare'];
+    secondDropdownMeal.innerHTML = '';
+    const optionsData = await fetch('/api/food/red-meat');
+    const data = await optionsData.json();
+    // Add new options to the second dropdown
+    data.forEach(function(option) {
+      console.log(option.food_name)
+      const newOption = document.createElement('option');
+      newOption.textContent = option.food_name;
+      newOption.value = option.food_name;
+      secondDropdownMeal.append(newOption);
+    });
     } else if (selectedValue === 'Pasta') {
-    options = ['Carbonara', 'Cheese-based', 'Tomato-based', 'Pesto-based', 'Seafood Pasta', 'Vegetable Pasta', 'Spicy Pasta'];
+    secondDropdownMeal.innerHTML = '';
+    const optionsData = await fetch('/api/food/pasta');
+    const data = await optionsData.json();
+    // Add new options to the second dropdown
+    data.forEach(function(option) {
+      console.log(option.food_name)
+      const newOption = document.createElement('option');
+      newOption.textContent = option.food_name;
+      newOption.value = option.food_name;
+      secondDropdownMeal.append(newOption);
+    });
     } else if (selectedValue === 'Vegetables') {
-    options = ['Salads', 'Green Vegetables', 'Root Vegetables', 'Mushrooms', 'Tomato-based Dishes', 'Spicy Vegetables'];
+    secondDropdownMeal.innerHTML = '';
+    const optionsData = await fetch('/api/food/vegetables');
+    const data = await optionsData.json();
+    // Add new options to the second dropdown
+    data.forEach(function(option) {
+      console.log(option.food_name)
+      const newOption = document.createElement('option');
+      newOption.textContent = option.food_name;
+      newOption.value = option.food_name;
+      secondDropdownMeal.append(newOption);
+    });
     } else if (selectedValue === 'Seafood') {
-    options = ['White Fish', 'Meaty and Oily Fish', 'Clam', 'Crab', 'Lobster', 'Abalone', 'Scallop'];
+    secondDropdownMeal.innerHTML = '';
+    const optionsData = await fetch('/api/food/seafood');
+    const data = await optionsData.json();
+    // Add new options to the second dropdown
+    data.forEach(function(option) {
+      const newOption = document.createElement('option');
+      newOption.textContent = option.food_name;
+      newOption.value = option.food_name;
+      secondDropdownMeal.append(newOption);
+    });
     } else if (selectedValue === 'Cheese') {
-    options = ['Goat Cheese', 'Feta', 'Manchego', 'Parmesan', 'Cheddar', 'Gruyere', 'Blue Cheese', 'Brie', 'Camembert'];
+    secondDropdownMeal.innerHTML = '';
+    const optionsData = await fetch('/api/food/cheese');
+    const data = await optionsData.json();
+    // Add new options to the second dropdown
+    data.forEach(function(option) {
+      const newOption = document.createElement('option');
+      newOption.textContent = option.food_name;
+      newOption.value = option.food_name;
+      secondDropdownMeal.append(newOption);
+    });
     } else if (selectedValue === 'Dessert') {
-    options = ['Fruit-based Desserts', 'Chocolate and Caramel', 'Baked Goods', 'Cakes'];
+    secondDropdownMeal.innerHTML = '';
+    const optionsData = await fetch('/api/food/dessert');
+    const data = await optionsData.json();
+    // Add new options to the second dropdown
+    data.forEach(function(option) {
+      const newOption = document.createElement('option');
+      newOption.textContent = option.food_name;
+      newOption.value = option.food_name;
+      secondDropdownMeal.append(newOption);
+    });
   }
-
-  // Clear existing options in the second dropdown
-  secondDropdownMeal.innerHTML = '';
-
-  // Add new options to the second dropdown
-  options.forEach(function(option) {
-    const newOption = document.createElement('option');
-    newOption.text = option;
-    secondDropdownMeal.add(newOption);
-  });
 });
