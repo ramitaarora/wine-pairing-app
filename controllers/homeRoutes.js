@@ -3,31 +3,27 @@ const { Food, Wine, Pairing, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
-    if (!req.session.logged_in) {
-        res.render('landingPage', {logged_in: false});
-    } else {
-        document.location.replace('/home');
-    }
+    res.render('landingPage', {logged_in: req.session.logged_in});
 });
 
-router.get('/search/wine/:wine_type', async (req, res) => {
+router.get('/search/wine/:wine_type', withAuth, async (req, res) => {
     const wineId = await Wine.findAll({ where: { wine_type: req.params.wine_type } });
     const winePairing = await Pairing.findAll({where: {wine_id: wineId[0].id},  
         include: [{ model: Food}, {model: Wine}]});
     const winePairings = winePairing.map(wine => wine.get({ plain: true }));
-    res.render('searchResults', {winePairings})
+    res.render('searchResults', {winePairings, logged_in: req.session.logged_in})
 });
 
-router.get('/search/food/:food_name', async (req, res) => {
+router.get('/search/food/:food_name', withAuth, async (req, res) => {
     const foodId = await Food.findAll({ where: { food_name: req.params.food_name } });
     const foodIds = foodId.map(food => food.get({ plain: true }));
     const winePairing = await Pairing.findAll({where: {food_id: foodIds[0].id},  
         include: [{ model: Food}, {model: Wine}]});
     const winePairings = winePairing.map(wine => wine.get({ plain: true }));
-    res.render('searchResults', {winePairings})
+    res.render('searchResults', {winePairings, logged_in: req.session.logged_in})
 });
 
-router.get('/home', async (req, res) => {
+router.get('/home', withAuth, async (req, res) => {
     try {
         const pairingData = await Pairing.findAll({
             attributes: ['pairing_id'],
@@ -39,9 +35,11 @@ router.get('/home', async (req, res) => {
             })
 
         const pairings = pairingData.map((pairing) => pairing.get({ plain: true }));
-        // console.log(pairings);
-        // res.json(pairings);
-        res.render('homepage', { pairings, logged_in: req.session.logged_in });
+
+        const userData = await User.findAll({where: {id : req.session.user_id }});
+        const userNameData = userData.map((user) => user.get({plain:true}));
+
+        res.render('homepage', { pairings, logged_in: req.session.logged_in, userNameData: userNameData[0].name});
 
     } catch (err) {
         res.status(500).json(err);
