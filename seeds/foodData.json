@@ -163,43 +163,43 @@
     },
     {
         "food_name": "White Fish",
-        "food_type": "Seafood Fish",
+        "food_type": "Seafood",
         "food_price": 19,
         "food_description": "Usually considered mild in flavor, it can sometimes have a delicate, sweet, buttery taste and flakey texture."
     },
     {
         "food_name": "Meaty and Oily Fish",
-        "food_type": "Seafood Fish",
+        "food_type": "Seafood",
         "food_price": 18,
         "food_description": "They can range from meaty to creamy, pungent to fatty. This protein is as varied as the fish in the sea."
     },
     {
         "food_name": "Clam",
-        "food_type": "Seafood Shellfish",
+        "food_type": "Seafood",
         "food_price": 17,
         "food_description": "A subtle briny taste, often described as mildy sweet compared to its fishier counter-parts."
     },
      {
         "food_name": "Crab",
-        "food_type": "Seafood Shellfish",
+        "food_type": "Seafood",
         "food_price": 23,
         "food_description": "Sweet and succulent with a slightly sweet and briny flavor reminiscent of the ocean. Its texture is delicate and moist in texture."
     },
     {
         "food_name": "Lobster",
-        "food_type": "Seafood Shellfish",
+        "food_type": "Seafood",
         "food_price": 28,
         "food_description": "A sweet, saline, briny taste, with a more savory flavor from the more matured of the species. The tail meat has firm textured and concentrates the flavor profile. Liquified butter is often a staple component of the dish."
     },
     {
         "food_name": "Abalone",
-        "food_type": "Seafood Shellfish",
+        "food_type": "Seafood",
         "food_price": 130,
         "food_description": "Its briny and sweet flavor is described as butter. The texture of the abalone is hard and dense."
     },
     {
         "food_name": "Scallop",
-        "food_type": "Seafood Shellfish",
+        "food_type": "Seafood",
         "food_price": 8,
         "food_description": "Briny and slightly sweet in flavor, but not overly fishy in taste. Its texture is firm and light and often described as succulent when cooked properly."
     },
