@@ -23,7 +23,7 @@ To install or access this project, use: <code>npm install</code>
 
 In MySQL workbench, run the code stored in db/schema.sql.
 
-To run seeds, use: <code>npm run seeds</code>
+To run seeds, use: <code>npm run seed</code>
 
 To run, use: <code>npm start</code>
 
