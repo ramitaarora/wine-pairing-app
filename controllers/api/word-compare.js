@@ -62,13 +62,13 @@ function findSimilarFoods(wineName) {
 for (const food in foodPairings) {
   const similarWines = findSimilarWines(food);
   const constName = `similarWinesFor${food.charAt(0).toUpperCase() + food.slice(1)}`;
-  console.log(`const ${constName} = ${JSON.stringify(similarWines)}`);
+  // console.log(`const ${constName} = ${JSON.stringify(similarWines)}`);
 }
 
 for (const wine in winePairings) {
   const similarFoods = findSimilarFoods(wine);
   const constName = `similarFoodsFor${wine.replace(/ /g, '')}`;
-  console.log(`const ${constName} = ${JSON.stringify(similarFoods)}`);
+  // console.log(`const ${constName} = ${JSON.stringify(similarFoods)}`);
 }
 
 module.exports = router;
