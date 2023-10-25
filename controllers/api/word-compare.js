@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Pairing = require('../../models');
+// const Pairing = require('../../models');
 
 
 const word = require('word-compare');
@@ -57,18 +57,33 @@ function findSimilarFoods(wineName) {
   }
   return matchingFoods;
 }
+const wines = findSimilarWines("tart")
+console.log(wines);
+const foods = findSimilarFoods("2018 Domaine Sind-Humbrecht Riesling Brand")
+console.log(foods);
+
+router.post('/wine', async (req, res) => {
+  try {
+    const similarWines = await findSimilarWines(req.body.food);
+      // console.log(similarWines);
+      res.json({similarWines});
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 
-for (const food in foodPairings) {
-  const similarWines = findSimilarWines(food);
-  const constName = `similarWinesFor${food.charAt(0).toUpperCase() + food.slice(1)}`;
-  console.log(`const ${constName} = ${JSON.stringify(similarWines)}`);
-}
 
-for (const wine in winePairings) {
-  const similarFoods = findSimilarFoods(wine);
-  const constName = `similarFoodsFor${wine.replace(/ /g, '')}`;
-  console.log(`const ${constName} = ${JSON.stringify(similarFoods)}`);
-}
+// for (const food in foodPairings) {
+//   const similarWines = findSimilarWines(food);
+//   const constName = `similarWinesFor${food.charAt(0).toUpperCase() + food.slice(1)}`;
+//   console.log(`const ${constName} = ${JSON.stringify(similarWines)}`);
+// }
+
+// for (const wine in winePairings) {
+//   const similarFoods = findSimilarFoods(wine);
+//   const constName = `similarFoodsFor${wine.replace(/ /g, '')}`;
+//   console.log(`const ${constName} = ${JSON.stringify(similarFoods)}`);
+// }
 
 module.exports = router;
