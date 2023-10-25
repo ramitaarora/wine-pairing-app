@@ -29,6 +29,8 @@ To run, use: <code>npm start</code>
 
 ## Usage
 
+Visit the deployed app at: https://wine-wizard-a6de255e2c53.herokuapp.com/
+
 <img src="./public/images/wine-wizard-screenshot.png" alt="screenshot"/>
 
 ## Credits
