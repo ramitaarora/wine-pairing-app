@@ -14,15 +14,16 @@
           <div class="row">
             <h1>Welcome {{ userNameData }}!</h1>
 
-  <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid">
-      <form class="d-flex" id="searchbar" role="search">
-        <input class="form-control me-2" id="search-input" type="search" placeholder="Enter Keywords" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-<div id="searchbar-results"></div>
+            {{!-- <nav class="navbar bg-body-tertiary"> --}}
+              <div class="container-fluid">
+                <p>Search by food for ideas: </p>
+                <form class="d-flex" id="searchbar" role="search">
+                  <input class="form-control me-2" id="search-input" type="search" placeholder="Enter Food Keywords" aria-label="Search">
+                  <button class="btn btn-outline-light text-white" type="submit">Search</button>
+                </form>
+              </div>
+            {{!-- </nav> --}}
+          <div id="searchbar-results"></div>
 
             <div id="section1" class="col-8">
             
