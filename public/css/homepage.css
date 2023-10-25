@@ -1,3 +1,23 @@
 .home {
     margin: 40px;
 }
+
+#search-dropdowns, #user-pairings {
+    margin: 40px;
+}
+
+#section1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#user-pairings {
+    height: 500px;
+    padding: 10px;
+    overflow: scroll;
+}
+
+#user-pairings::-webkit-scrollbar {
+    overflow: hidden;
+}

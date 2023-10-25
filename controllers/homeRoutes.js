@@ -6,6 +6,10 @@ router.get('/', (req, res) => {
     res.render('landingPage', {logged_in: req.session.logged_in});
 });
 
+router.get('/search', (req, res) => {
+    res.redirect('/home');
+})
+
 router.get('/search/wine/:wine_type', withAuth, async (req, res) => {
     const wineId = await Wine.findAll({ where: { wine_type: req.params.wine_type } });
     const winePairing = await Pairing.findAll({where: {wine_id: wineId[0].id},  
@@ -38,8 +42,19 @@ router.get('/home', withAuth, async (req, res) => {
 
         const userData = await User.findAll({where: {id : req.session.user_id }});
         const userNameData = userData.map((user) => user.get({plain:true}));
-
-        res.render('homepage', { pairings, logged_in: req.session.logged_in, userNameData: userNameData[0].name});
+        
+        const userPairingData = await Pairing.findAll({
+             where: { user_id: req.session.user_id },
+             include: [{model: Wine}, {model: Food}] 
+            });
+        const userPairings = userPairingData.map((pairings => pairings.get({plain:true})));
+        
+        res.render('homepage', { 
+            pairings, 
+            logged_in: req.session.logged_in, 
+            userNameData: userNameData[0].name, 
+            userPairings
+        });
 
     } catch (err) {
         res.status(500).json(err);
