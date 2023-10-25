@@ -14,8 +14,25 @@ const { Food, Wine, Pairing, User } = require('../../models');
 // })
 
 router.get('/pairing', async (req, res) => {
-    const pairingData = await Pairing.findAll();
+    const pairingData = await Pairing.findAll({
+        include: [{model: Wine}, {model: Food}]
+    });
     res.json(pairingData);
+})
+
+router.post('/update', async(req, res) => {
+    try {
+        const pairingId = req.body.id;
+        console.log(req.body.id);
+        const updatePairing = await Pairing.update({user_id: req.session.user_id}, {
+            where: {
+                pairing_id: pairingId
+            }
+        });
+        res.status(200).json(updatePairing);
+    } catch (err) {
+        res.status(400).json(err)
+    }
 })
 
 module.exports = router;
