@@ -21,6 +21,7 @@
     "handlebars": "^4.7.8",
     "lowline.ai": "^1.0.18",
     "mysql2": "^3.6.2",
-    "sequelize": "^6.33.0"
+    "sequelize": "^6.33.0",
+    "word-compare": "^1.0.2"
   }
 }
