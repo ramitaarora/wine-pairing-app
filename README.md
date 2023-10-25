@@ -1,2 +1,5 @@
-# wine-pairing-app
-UCLA Bootcamp Project 2
+# Wine Pairing App
+
+## UCLA Bootcamp Project 2
+
+
