@@ -87,24 +87,14 @@
             
             <div class="col-4">
               <div class="row">
-                  <div class="col-4">
-                    <div id="list-example" class="list-group">
-                      <a class="list-group-item list-group-item-action" href="#user-pairing-1">Pairing 1</a>
-                      <a class="list-group-item list-group-item-action" href="#user-pairing-2">Pairing 2</a>
-                      <a class="list-group-item list-group-item-action" href="#user-pairing-3">Pairing 3</a>
-                      <a class="list-group-item list-group-item-action" href="#user-pairing-4">Pairing 4</a>
-                    </div>
-                  </div>
                   <div class="col-8">
                     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-                      <h4 id="user-pairing-1">Pairing 1</h4>
-                      <p>A pairing you have chosen in the past: A White Wine Chardonnay paired with Turkey</p>
-                      <h4 id="user-pairing-2">Pairing 2</h4>
-                      <p>A pairing you have chosen in the past: A Red Wine Merlot paired with Venison</p>
-                      <h4 id="user-pairing-3">Pairing 3</h4>
-                      <p>A pairing you have chosen in the past: A White Wine Pinot Noir paired with Pork</p>
-                      <h4 id="user-pairing-4">Pairing 4</h4>
-                      <p>A pairing you have chosen in the past: A Red Wine Zinfendel paired with a Tomato-based Pasta</p>
+                      <h2>Pairings you have chosen in the past: </h2>
+                      {{#each userPairings as |pairing|}}
+                      <br>
+                      <h4 id="user-pairing"><i>{{pairing.wine.wine_type}}</i></h4>
+                      <p>A {{pairing.wine.wine_name}} paired with {{pairing.food.food_name}}</p>
+                      {{/each}}
                     </div>
                   </div>
                 </div>
