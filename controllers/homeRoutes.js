@@ -48,9 +48,7 @@ router.get('/home', withAuth, async (req, res) => {
              include: [{model: Wine}, {model: Food}] 
             });
         const userPairings = userPairingData.map((pairings => pairings.get({plain:true})));
-
-        console.log(userPairings);
-
+        
         res.render('homepage', { 
             pairings, 
             logged_in: req.session.logged_in, 

@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="/css/homepage.css">
 
 <section class="home">
+
   <div class="container text-center">
           <div class="row">
-            <div class="col-8">
-              <h1>Welcome {{ userNameData }}!</h1>
+            <h1>Welcome {{ userNameData }}!</h1>
 
+            <div id="section1" class="col-8">
             
-              <div class="col">
+              <div id="search-dropdowns" class="col">
                   <div class="col-12 col-sm-6 col-lg-10 mb-3">
                     <div class="card">
                       <h3 class="card-header">
@@ -33,7 +34,6 @@
                             <option></option>
                           </select>
                           </p>
-                      
                         <p>or</p>
                         <p id="food-dropdown">Please select which type of meal you will be enjoying with your bottle of wine:</p>
                         <p><select class="form-select" id="food-dropdown-choice" aria-label="Default select example">
@@ -56,7 +56,24 @@
                 </div>
 
 
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div id="user-pairings" class="col-4">
+              <div class="row">
+                  <div class="col-8">
+                    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                      <h2>Pairings you have chosen in the past: </h2>
+                      {{#each userPairings as |pairing|}}
+                      <br>
+                      <h4 id="user-pairing"><i>{{pairing.wine.wine_type}}</i></h4>
+                      <p>A {{pairing.wine.wine_name}} paired with {{pairing.food.food_name}}</p>
+                      {{/each}}
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            </div>
+
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <img src="/images/WineSlide1.jpg" class="d-block w-100" alt="wine-1">
@@ -79,28 +96,9 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                   </button>
-                </div>
-
-
             </div>
 
-            
-            <div class="col-4">
-              <div class="row">
-                  <div class="col-8">
-                    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-                      <h2>Pairings you have chosen in the past: </h2>
-                      {{#each userPairings as |pairing|}}
-                      <br>
-                      <h4 id="user-pairing"><i>{{pairing.wine.wine_type}}</i></h4>
-                      <p>A {{pairing.wine.wine_name}} paired with {{pairing.food.food_name}}</p>
-                      {{/each}}
-                    </div>
-                  </div>
-                </div>
-            </div>
 
-          
           </div>
           <script src="/js/dropdown.js"></script>
     </div>
