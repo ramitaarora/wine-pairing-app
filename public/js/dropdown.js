@@ -11,7 +11,7 @@ whiteRedSelection.addEventListener('change', async function(event) {
   let options = [];
 
   if (selectedValue === 'white') {
-    secondDropdownWine.innerHTML = '';
+    secondDropdownWine.innerHTML = '<option></option>';
     const optionsData = await fetch('/api/wine/white');
     const data = await optionsData.json();
     // Add new options to the second dropdown
@@ -23,7 +23,7 @@ whiteRedSelection.addEventListener('change', async function(event) {
     });
 
   } else if (selectedValue === 'red') {
-    secondDropdownWine.innerHTML = '';
+    secondDropdownWine.innerHTML = '<option></option>';
     const optionsData = await fetch('/api/wine/red');
     const data = await optionsData.json();
     // Add new options to the second dropdown
@@ -54,7 +54,7 @@ mealTypeSelection.addEventListener('change', async function(event) {
   // Generate options for the second dropdown based on the selected value
   let options = [];
   if (selectedValue === 'White Meat') {
-    secondDropdownMeal.innerHTML = '';
+    secondDropdownMeal.innerHTML = '<option></option>';
     const optionsData = await fetch('/api/food/white-meat');
     const data = await optionsData.json();
     // Add new options to the second dropdown
@@ -66,7 +66,7 @@ mealTypeSelection.addEventListener('change', async function(event) {
       secondDropdownMeal.append(newOption);
     });
     } else if (selectedValue === 'Red Meat') {
-    secondDropdownMeal.innerHTML = '';
+    secondDropdownMeal.innerHTML = '<option></option>';
     const optionsData = await fetch('/api/food/red-meat');
     const data = await optionsData.json();
     // Add new options to the second dropdown
@@ -78,7 +78,7 @@ mealTypeSelection.addEventListener('change', async function(event) {
       secondDropdownMeal.append(newOption);
     });
     } else if (selectedValue === 'Pasta') {
-    secondDropdownMeal.innerHTML = '';
+    secondDropdownMeal.innerHTML = '<option></option>';
     const optionsData = await fetch('/api/food/pasta');
     const data = await optionsData.json();
     // Add new options to the second dropdown
@@ -90,7 +90,7 @@ mealTypeSelection.addEventListener('change', async function(event) {
       secondDropdownMeal.append(newOption);
     });
     } else if (selectedValue === 'Vegetables') {
-    secondDropdownMeal.innerHTML = '';
+    secondDropdownMeal.innerHTML = '<option></option>';
     const optionsData = await fetch('/api/food/vegetables');
     const data = await optionsData.json();
     // Add new options to the second dropdown
@@ -102,7 +102,7 @@ mealTypeSelection.addEventListener('change', async function(event) {
       secondDropdownMeal.append(newOption);
     });
     } else if (selectedValue === 'Seafood') {
-    secondDropdownMeal.innerHTML = '';
+    secondDropdownMeal.innerHTML = '<option></option>';
     const optionsData = await fetch('/api/food/seafood');
     const data = await optionsData.json();
     // Add new options to the second dropdown
@@ -113,7 +113,7 @@ mealTypeSelection.addEventListener('change', async function(event) {
       secondDropdownMeal.append(newOption);
     });
     } else if (selectedValue === 'Cheese') {
-    secondDropdownMeal.innerHTML = '';
+    secondDropdownMeal.innerHTML = '<option></option>';
     const optionsData = await fetch('/api/food/cheese');
     const data = await optionsData.json();
     // Add new options to the second dropdown
@@ -124,7 +124,7 @@ mealTypeSelection.addEventListener('change', async function(event) {
       secondDropdownMeal.append(newOption);
     });
     } else if (selectedValue === 'Dessert') {
-    secondDropdownMeal.innerHTML = '';
+    secondDropdownMeal.innerHTML = '<option></option>';
     const optionsData = await fetch('/api/food/dessert');
     const data = await optionsData.json();
     // Add new options to the second dropdown

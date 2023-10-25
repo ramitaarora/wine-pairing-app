@@ -14,6 +14,7 @@
                                 <th>Wine Name</th>
                                 <th>Best with</th>
                                 <th>Food Description</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -22,6 +23,7 @@
                                 <td>{{pairing.wine.wine_name}}</td>
                                 <td>{{pairing.food.food_name}}</td>
                                 <td>{{pairing.food.food_description}}</td>
+                                <td><img id="save-button" value={{pairing.pairing_id}} src="/images/floppy.svg" alt="save"/></td>
                             </tr>
                             {{/each}}
                         </tbody>
@@ -41,4 +43,5 @@
                 </div>
             </div>
         </div>
+        <script src="/js/savePairing.js"></script>
 </section>

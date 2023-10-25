@@ -88,3 +88,7 @@ header {
 .pairing-image:hover {
     transform: scale(1.1);
 }
+
+#save-button {
+    cursor: pointer;
+}

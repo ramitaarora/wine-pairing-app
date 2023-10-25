@@ -29,7 +29,6 @@ const seedDatabase = async () => {
       individualHooks: true,
       returning: true,
     });
-    
     // for (let i=0; i < 10; i++) {
     //   await Pairing.create({
     //     food_id: foods[Math.floor(Math.random()*foods.length)].id,
