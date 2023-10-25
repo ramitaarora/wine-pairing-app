@@ -13,4 +13,9 @@ const { Food, Wine, Pairing, User } = require('../../models');
 //     // res.json(winePairing)
 // })
 
+router.get('/pairing', async (req, res) => {
+    const pairingData = await Pairing.findAll();
+    res.json(pairingData);
+})
+
 module.exports = router;
