@@ -1,8 +1,8 @@
-const saveButton = document.querySelector('#save-button');
+const saveButton = document.querySelectorAll('#save-button');
 
-saveButton.addEventListener('click', (event) => {
+saveButton.forEach(link => link.addEventListener('click', (event) => {
     event.preventDefault();
-    const pairingId = saveButton.getAttribute('value');
+    const pairingId = link.getAttribute('value');
     console.log(pairingId)
 
     fetch('/api/search/update', {
@@ -11,4 +11,4 @@ saveButton.addEventListener('click', (event) => {
         headers: { 'Content-Type': 'application/json' },
     })
     alert("Saved!");
-});
+}));
